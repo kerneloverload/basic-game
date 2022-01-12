@@ -1,0 +1,219 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting Game</title>
+  </head>
+  <body style="margin: 0px; padding: 0px; background-color: black">
+    <div
+      style="
+        margin: auto;
+        height: 700px;
+        width: 100%;
+        border: 5px solid skyblue;
+      "
+      class="background"
+    >
+      <div
+        id="screen"
+        style="
+          visibility: hidden;
+          display: flex;
+          margin: auto;
+          margin-top: 10px;
+          height: 400px;
+          width: 90%;
+          border: 5px solid skyblue;
+          background-image: url('images/background.jpeg');
+          background-size: 100% 100%;
+        "
+        class="screen"
+      >
+        <div
+          id="win-screen"
+          class="win-screen"
+          style="
+            display: flex;
+            background-color: blanchedalmond;
+            height: inherit;
+            width: inherit;
+            opacity: 70%;
+            position: absolute;
+            z-index: 1;
+          "
+        ></div>
+        <div
+          id="winner"
+          style="position: absolute; display: flex; width: inherit; z-index: 2"
+        >
+          <div class="winner-img" style="margin-left: 20%">
+            <img src="images/win.gif" alt="" />
+          </div>
+          <div style="margin-top: 50px; text-align: center">
+            <h1 id="round-details"></h1>
+            <div style="text-align: center">
+              <h1 id="player-details"></h1>
+              <h1>Won</h1>
+              <button
+                id="next-round"
+                style="font-size: 15px; height: 30px; width: 100px"
+              >
+                Next Round
+              </button>
+              <button
+                id="restart"
+                style="
+                  margin-left: 10px;
+                  font-size: 15px;
+                  height: 30px;
+                  width: 100px;
+                  height: 30px;
+                  width: 100px;
+                "
+              >
+                Restart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bar"
+          style="
+            margin-top: 5px;
+            display: flex;
+            height: 50px;
+            width: 100%;
+            padding: 5px;
+          "
+        >
+          <div
+            class="health"
+            style="
+              margin: auto;
+              height: 30px;
+              width: 100px;
+              border: 2px solid black;
+              font-size: 25px;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            <div
+              id="health1"
+              class="health-bar"
+              style="
+                background-color: chartreuse;
+                width: 100%;
+                height: inherit;
+                width: inherit;
+              "
+            ></div>
+            <span>Player 1</span>
+          </div>
+
+          <div
+            class="health"
+            style="
+              justify-content: end;
+              align-items: flex-end;
+              margin: auto;
+              height: 30px;
+              width: 100px;
+              border: 2px solid black;
+              font-size: 25px;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            <div
+              id="health2"
+              class="health-bar"
+              style="background-color: chartreuse; width: 100%; height: inherit"
+            ></div>
+            <span>Player 2</span>
+          </div>
+        </div>
+        <div
+          class="players"
+          style="
+            position: absolute;
+            margin-top: 30px;
+            display: flex;
+            width: inherit;
+          "
+        >
+          <div class="player1" style="margin: auto">
+            <img
+              id="player1"
+              src="images/standing.gif"
+              alt=""
+            />
+          </div>
+          <div class="player2" style="margin: auto">
+            <img
+              id="player2"
+              style="transform: scaleX(-1)"
+              src="images/standing.gif"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="btn-shoot" style="margin-left: 100px; margin-top: 10px">
+        <button
+          id="shoot1"
+          style="
+            height: 50px;
+            width: 100px;
+            font-size: larger;
+            font-weight: 600;
+          "
+        >
+          Attack
+        </button>
+      </div>
+      <div class="btn-shoot" style="margin-left: 110px; margin-top: 10px">
+        <h2 style="color: wheat">Player 1</h2>
+      </div>
+      <div class="btn-start" style="margin-left: 700px; margin-top: 10px">
+        <button
+          id="start"
+          style="
+            height: 50px;
+            width: 100px;
+            font-size: larger;
+            font-weight: 600;
+          "
+        >
+          Start
+        </button>
+      </div>
+
+      <div class="btn-shoot" style="margin-left: 100px; margin-top: 10px">
+        <button
+          id="shoot2"
+          style="
+            height: 50px;
+            width: 100px;
+            font-size: larger;
+            font-weight: 600;
+          "
+        >
+          Attack
+        </button>
+      </div>
+      <div class="btn-shoot" style="margin-left: 110px; margin-top: 10px">
+        <h2 style="color: wheat">Player 2</h2>
+      </div>
+      <!-- <div class="scores" style="margin-left: 100px; height: 150px; width: 300px; border: 2px solid beige;">
+          <h2 id="roundhead" style="color: white;"><span id="round-count"></span></h2>
+        <div style="height:inherit; width: inherit;" class="player-one">
+          <h2 style="color: wheat;">Player 1: <span id="playerone-scores"></span></h2>
+          <h2 style="color: wheat;">Player 2: <span id="playertwo-scores"></span></h2>
+        </div>
+      </div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
